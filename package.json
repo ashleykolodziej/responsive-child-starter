@@ -21,15 +21,21 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@wordpress/babel-preset-default": "^4.12.1",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "@wordpress/babel-preset-default": "^4.20.0",
+    "@wordpress/block-library": "^6.0.13",
     "@wordpress/eslint-plugin": "^5.1.0",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.8",
+    "babel-loader": "^8.2.3",
     "babelify": "^10.0.0",
     "browserify-shim": "^3.8.14",
     "eslint": "^6.8.0",
-    "grunt": "^1.0.4",
+    "grunt": "^1.4.1",
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
@@ -41,11 +47,11 @@
     "grunt-sass": "^3.1.0",
     "grunt-version": "^2.0.0",
     "grunt-wp-i18n": "^1.0.3",
-    "node-sass": "^4.14.0"
+    "node-sass": "^4.14.1"
   },
   "dependencies": {
     "responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#4.0.0",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.13.1",
     "stylelint-config-wordpress": "^16.0.0"
   },
   "scripts": {
@@ -53,6 +59,8 @@
     "styles:lint": "stylelint \"**/*.scss\" --cache || echo \"\"",
     "styles:fix": "stylelint \"**/*.scss\" --cache --fix --s || echo \"\" && npm run styles:fix:success --s && npm run styles:fix:warn --s",
     "styles:fix:success": "echo \"\\033[32mSuccess! Fixed style errors where possible.\\x1b[0m\"",
-    "styles:fix:warn": "echo \"\\033[33m\nErrors which could not be resolved automatically are listed above. Please review changes carefully in Tower or your git management tool of choice before committing, as errors can occur, especially in Sass maps.\n\\x1b[0m\""
+    "styles:fix:warn": "echo \"\\033[33m\nErrors which could not be resolved automatically are listed above. Please review changes carefully in Tower or your git management tool of choice before committing, as errors can occur, especially in Sass maps.\n\\x1b[0m\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
